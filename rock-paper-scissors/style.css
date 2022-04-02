@@ -1,0 +1,92 @@
+:root {
+  --main-color: #202020;
+  --win-color: #5fad41;
+  --win-color-light: #dbeed2;
+  --lose-color: #a2021f;
+  --lose-color-light: #fec2cd;
+  --draw-color: #f36b16;
+  --draw-color-light: #fcdac5;
+}
+
+body {
+  font-family: monospace;
+  font-size: 16px;
+  color: var(--main-color);
+  transition: background-color 0.5s ease;
+}
+
+body.win {
+  background-color: var(--win-color-light);
+}
+
+body.lose {
+  background-color: var(--lose-color-light);
+}
+
+body.draw {
+  background-color: var(--draw-color-light);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.headlines {
+  margin-bottom: 0.8em;
+}
+
+button {
+  padding: 0.8em 1.2em;
+  margin: 0.5em;
+  background-color: white;
+  border: 2px solid var(--main-color);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+button:after {
+  position: relative;
+}
+
+#rock:after {
+  content: " 🗻";
+}
+
+#paper:after {
+  content: " 📄";
+}
+
+#scissors:after {
+  content: " ✂️";
+}
+
+.result {
+  display: block;
+  text-align: center;
+  margin: 0.5em;
+  font-size: 3rem;
+}
+
+span.win {
+  color: var(--win-color);
+}
+
+span.lose {
+  color: var(--lose-color);
+}
+
+span.draw {
+  color: var(--draw-color);
+}
